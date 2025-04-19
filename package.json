@@ -2,18 +2,26 @@
     "name": "helloapp",
     "version": "1.0.0",
     "description": "example node app for heroku ",
-    "main": "hello.js",
+    "main": "hello_app.js",
     "scripts": {
-    "start": "node hello.js"
-  },
+        "start": "node hello_app.js"
+    },
     "repository": {
-    "type": "git",
-    "url": ""
-  },
+        "type": "git",
+        "url": ""
+    },
     "author": "",
     "license": "ISC",
     "bugs": {
-    "url": ""
-  },
-    "homepage": ""
-  }
+        "url": ""
+    },
+    "homepage": "",
+    "dependencies": {
+        "body-parser": "^2.2.0",
+        "dotenv": "^16.5.0",
+        "ejs": "^3.1.10",
+        "express": "^5.1.0",
+        "mongodb": "^6.15.0",
+        "mongoose": "^8.13.2"
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>query result</title>
+
+</head>
+
+<body>
+    <h1>Query Result</h1>
+
+    <div class="result-container">
+        <% if (locals.error) { %>
+            <p class="error-message">
+                <%= error %>
+            </p>
+            <% } else { %>
+                <% if (isZipCode) { %>
+                    <h2>邮编 <span class="highlight">
+                            <%= query %>
+                        </span> 对应的地点信息</h2>
+                    <% } else { %>
+                        <h2>地点 <span class="highlight">
+                                <%= place %>
+                            </span> 的信息</h2>
+                        <% } %>
+
+                            <div>
+                                <h3>Place:</h3>
+                                <p>
+                                    <%= place %>
+                                </p>
+
+                                <h3>Zips:</h3>
+                                <ul class="zip-list">
+                                    <% zips.forEach(function(zip) { %>
+                                        <li>
+                                            <%= zip %>
+
+                                        </li>
+                                        <% }); %>
+                                </ul>
+                            </div>
+                            <% } %>
+    </div>
+
+    <a href="/" class="back-link">home page</a>
+</body>
+
+</html>
